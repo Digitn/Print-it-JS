@@ -24,7 +24,7 @@ const tagLine = document.querySelector('#banner p');
 let activeSlideIndex = 0; // Index du slide actif
 
 // Mise en place des écouteurs d'évènements lors du clic des boutons de flèches pour le changement d'image du slider
-// Et ajout d'un modulo pour faire un défilement infini dans le tableau des slides
+// Et utilisation de l'opérateur modulo pour faire un défilement infini dans le tableau des slides
 const arrows = document.querySelectorAll('.arrow');
 arrows.forEach(function(arrow) {
 	arrow.addEventListener('click', function() {
@@ -49,7 +49,6 @@ for (let i = 0; i < slides.length; i++) {
 	});
 	bulletPoints.appendChild(bullet);
 }	
-updateSlide(activeSlideIndex); // Mise à jour éléments du slide actif au chargement initial
 
 // Fonction pour mettre à jour le slide actif (bullet point, éléments texte <p> et image src)
 function updateSlide(slideIndex) {
@@ -66,3 +65,4 @@ function updateSlide(slideIndex) {
 	}
 	});
 }
+updateSlide(activeSlideIndex);  // Mise à jour éléments slide actif au chargement initial
